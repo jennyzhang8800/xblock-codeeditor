@@ -1,39 +1,46 @@
-ÕâÊÇÒ»¸öÊµÏÖÔÚÏß´úÂë±à¼­Æ÷¹¦ÄÜµÄxblock¡£»ùÓÚcodemirrorÊµÏÖÔÚÏß´úÂë±à¼­¹¦ÄÜ¡£
-1.°²×°£º
-  1.1 °Ñxblock-coedeeditor¿ËÂ¡µ½µÄopen edxÆ½Ì¨ÖĞ¡£ÈçÎÒ¿ËÂ¡µ½/home/zyn
+è¿™æ˜¯ä¸€ä¸ªå®ç°åœ¨çº¿ä»£ç ç¼–è¾‘å™¨åŠŸèƒ½çš„xblockã€‚åŸºäºcodemirrorå®ç°åœ¨çº¿ä»£ç ç¼–è¾‘åŠŸèƒ½ã€‚
+
+1.å®‰è£…ï¼š
+
+  1.1 æŠŠxblock-coedeeditorå…‹éš†åˆ°çš„open edxå¹³å°ä¸­ã€‚å¦‚æˆ‘å…‹éš†åˆ°/home/zyn
+  
       cd /home/zyn
       git clone https://github.com/jennyzhang8800/xblock-codeeditor
-  1.2 °²×°xblock
+  1.2 å®‰è£…xblock
+  
       sudo -u edxapp /edx/bin/pip.edxapp install /home/zyn/xblock-codeeditor
       
-      ×¢Òâ£º/home/zyn/xblock-codeeditorÊÇÄãÔÚ1.1ÖĞ¿ËÂ¡µÄxblock-codeeditorËùÔÚµÄÂ·¾¶
-  1.3 °ÑstaticÎÄ¼ş¼Ğ¸´ÖÆµ½/edx/app/edxapp/venvs/edxapp/local/lib/python2.7/site-packages/static/
+      æ³¨æ„ï¼š/home/zyn/xblock-codeeditoræ˜¯ä½ åœ¨1.1ä¸­å…‹éš†çš„xblock-codeeditoræ‰€åœ¨çš„è·¯å¾„
+      
+  1.3 æŠŠstaticæ–‡ä»¶å¤¹å¤åˆ¶åˆ°/edx/app/edxapp/venvs/edxapp/local/lib/python2.7/site-packages/static/
       sudo cp -r static/* /edx/app/edxapp/venvs/edxapp/local/lib/python2.7/site-packages/static/
-  1.4 °ÑcodeeditorÎÄ¼ş¼Ğ¸´ÖÆµ½ /edx/var/edxapp/staticfiles/ÏÂ
+  1.4 æŠŠcodeeditoræ–‡ä»¶å¤¹å¤åˆ¶åˆ° /edx/var/edxapp/staticfiles/ä¸‹
+  
       sudo cp -r codeeditor /edx/var/edxapp/staticfiles/
-2.Ê¹block¿ÉÓÃ£º
-1£©ÔÚedx-platform/lms/envs/common.pyÖĞÈ¥µô×¢ÊÍ£º
-# from xmodule.x_module import prefer_xmodules
-# XBLOCK_SELECT_FUNCTION = prefer_xmodules
-2£©	ÔÚedx-platform/cms/envs/common.py,ÖĞÈ¥µô×¢ÊÍ£º
-# from xmodule.x_module import prefer_xmodules
-# XBLOCK_SELECT_FUNCTION = prefer_xmodules
-3£©	ÔÚedx-platform/cms/envs/common.pyÖĞ°Ñ
-'ALLOW_ALL_ADVANCED_COMPONENTS': False,
-¸Ä³É£º
-'ALLOW_ALL_ADVANCED_COMPONENTS': True,
+2.ä½¿blockå¯ç”¨ï¼š
 
-3.ÔÚStudioÖĞ°ÑÄãµÄblockÌí¼Óµ½¿Î³ÌµÄ¸ß¼¶ÉèÖÃÖĞ¡£
-   1£©µÇÂ¼µ½Studio,´ò¿ªÄãµÄ¿Î³Ì
-   2£©settings->Advanced Setting
-   3)°Ñ¼ü¡±advanced_modules¡±µÄÖµ¸ÄÎª"codeeditor".
-4.ÔÚstudioÖĞ,°ÑÄãµÄblockÌí¼Óµ½¿Î³Ì£¬
-   1£©Edit±à¼­Ò»¸öµ¥Ôª
-   2£©Advanced->codeeditor
+   2.1åœ¨edx-platform/lms/envs/common.pyä¸­å»æ‰æ³¨é‡Šï¼š
+        # from xmodule.x_module import prefer_xmodules
+        # XBLOCK_SELECT_FUNCTION = prefer_xmodules
+   2.2	åœ¨edx-platform/cms/envs/common.py,ä¸­å»æ‰æ³¨é‡Šï¼š
+         # from xmodule.x_module import prefer_xmodules
+        # XBLOCK_SELECT_FUNCTION = prefer_xmodules
+   2.3	åœ¨edx-platform/cms/envs/common.pyä¸­æŠŠ
+         'ALLOW_ALL_ADVANCED_COMPONENTS': False,
+       æ”¹æˆï¼š
+         'ALLOW_ALL_ADVANCED_COMPONENTS': True,
+
+3.åœ¨Studioä¸­æŠŠä½ çš„blockæ·»åŠ åˆ°è¯¾ç¨‹çš„é«˜çº§è®¾ç½®ä¸­ã€‚
+   1ï¼‰ç™»å½•åˆ°Studio,æ‰“å¼€ä½ çš„è¯¾ç¨‹
+   2ï¼‰settings->Advanced Setting
+   3)æŠŠé”®â€advanced_modulesâ€çš„å€¼æ”¹ä¸º"codeeditor".
+4.åœ¨studioä¸­,æŠŠä½ çš„blockæ·»åŠ åˆ°è¯¾ç¨‹ï¼Œ
+   1ï¼‰Editç¼–è¾‘ä¸€ä¸ªå•å…ƒ
+   2ï¼‰Advanced->codeeditor
 
 
-×¢Òâ£ºÈç¹û°ÑcodeeditorÎÄ¼ş¼Ğ·ÅÔÚÆäËûÎ»ÖÃ¡£¼ÇµÃ¸Ä/static/html/ÏÂµÄcodeeditor_view.htmlÖĞµÄsrc
-<iframe src="http://192.168.1.113/static/codeeditor/codemirror.html">
-°Ñ"http://192.168.1.113/static/codeeditor/codemirror.html"»»³ÉÄãÊµ¼ÊcodeeditorÎÄ¼ş¼ĞËùÔÚÎ»ÖÃ¡£
+æ³¨æ„ï¼šå¦‚æœæŠŠcodeeditoræ–‡ä»¶å¤¹æ”¾åœ¨å…¶ä»–ä½ç½®ã€‚è®°å¾—æ”¹/static/html/ä¸‹çš„codeeditor_view.htmlä¸­çš„src
+ <iframe src="http://192.168.1.113/static/codeeditor/codemirror.html">
+æŠŠ"http://192.168.1.113/static/codeeditor/codemirror.html"æ¢æˆä½ å®é™…codeeditoræ–‡ä»¶å¤¹æ‰€åœ¨ä½ç½®ã€‚
   
   
