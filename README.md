@@ -56,10 +56,10 @@
    
 
 
-注意：如果把codeeditor文件夹放在其他位置。记得改/static/html/下的codeeditor_view.html中的src
+   注意：如果把codeeditor文件夹放在其他位置。记得改/static/html/下的codeeditor_view.html中的src
 
- <iframe src="http://192.168.1.113/static/codeeditor/codemirror.html">
+        <iframe src="http://192.168.1.113/static/codeeditor/codemirror.html">
  
-把"http://192.168.1.113/static/codeeditor/codemirror.html"换成你实际codeeditor文件夹所在位置。
+     把"http://192.168.1.113/static/codeeditor/codemirror.html"换成你实际codeeditor文件夹所在位置。
   
   
